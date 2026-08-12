@@ -3,14 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageRenderer from "../components/PageRenderer.astro";
 import { sanityClient } from "../lib/sanity";
 
-const { slug } = Astro.params;
-
 export async function getStaticPaths() {
   const pages = await sanityClient.fetch(`
-    *[_type == "page" && defined(slug.current)] {
+    *[
+      _type == "page" &&
+      defined(slug.current) &&
+      slug.current != "/" &&
+      slug.current != ""
+    ] {
       "slug": slug.current
     }
   `);
+
+  console.log("Static pages:", pages);
 
   return pages
     .filter((page) => page.slug)
@@ -21,8 +26,13 @@ export async function getStaticPaths() {
     }));
 }
 
+const { slug } = Astro.params;
+
 const query = `
-  *[_type == "page" && slug.current == $slug][0] {
+  *[
+    _type == "page" &&
+    slug.current == $slug
+  ][0] {
     title,
     slug,
     sections[]

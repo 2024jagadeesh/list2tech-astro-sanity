@@ -1,0 +1,105 @@
+---
+const { data } = Astro.props;
+---
+
+
+<section id="contact" class="cta-section">
+
+
+<div class="section-inner" style="text-align:center;">
+
+
+<div class="section-eyebrow">
+
+{data.eyebrow}
+
+</div>
+
+
+
+<h2 class="section-title">
+
+{data.title}
+
+</h2>
+
+
+
+<p class="section-body" set:html={data.description}></p>
+
+
+
+{
+(data.phone || data.email) && (
+
+<p class="cta-contact">
+
+{
+data.phone && (
+<strong>
+{data.phone}
+</strong>
+)
+}
+
+
+{" "}
+
+
+{
+data.email && (
+<strong>
+{data.email}
+</strong>
+)
+}
+
+</p>
+
+)
+}
+
+
+
+<div class="cta-actions">
+
+
+{
+
+data.buttons?.map((button)=>(
+
+
+<a
+
+href={button.url}
+
+class:list={[
+
+"btn",
+
+button.style === "Primary"
+? "btn-white"
+: "btn-ghost"
+
+]}
+
+>
+
+{button.label}
+
+</a>
+
+
+))
+
+}
+
+
+</div>
+
+
+
+</div>
+
+
+</section>

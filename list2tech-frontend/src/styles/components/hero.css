@@ -1,0 +1,573 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+
+.hero {
+
+    padding: 40px 0 80px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fdf5f8 100%
+    );
+
+}
+
+
+
+/* =========================
+   HEADER NAVIGATION
+========================= */
+
+
+.hero nav {
+
+    max-width:var(--container);
+
+    margin:auto;
+
+    padding:0 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.logo {
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+}
+
+
+.logo span {
+
+    color:var(--primary);
+
+}
+
+
+
+.nav-links {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+
+.nav-links a {
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color:var(--primary);
+
+}
+
+
+
+.nav-cta {
+
+    background:var(--primary);
+
+    color:#fff !important;
+
+    padding:12px 24px;
+
+    border-radius:8px;
+
+}
+
+
+
+/* =========================
+   HERO GRID
+========================= */
+
+
+.hero-grid {
+
+    max-width:var(--container);
+
+    margin:80px auto 0;
+
+    padding:0 20px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 470px;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+/* =========================
+   HERO LEFT
+========================= */
+
+
+.hero-eyebrow {
+
+    display:inline-flex;
+
+    padding:8px 18px;
+
+    background:#fce7f3;
+
+    color:var(--primary);
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:64px;
+
+    line-height:1.08;
+
+    letter-spacing:-1px;
+
+    color:var(--dark);
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero h1 em {
+
+    color:var(--primary);
+
+    font-style:normal;
+
+}
+
+
+
+.hero-sub {
+
+    font-size:19px;
+
+    line-height:1.7;
+
+    color:#4b5563;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.hero-actions {
+
+    display:flex;
+
+    gap:16px;
+
+}
+
+
+
+/* =========================
+   HERO CREDENTIAL PANEL
+========================= */
+
+
+.hero-creds {
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.08);
+
+}
+
+
+
+.creds-title {
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--dark);
+
+    margin-bottom:22px;
+
+}
+
+
+
+/* =========================
+   STAT COUNTS
+========================= */
+
+
+.creds-counts {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+.count-chip {
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#f9fafb;
+
+}
+
+
+
+.count-num {
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+}
+
+
+
+.count-label {
+
+    font-size:13px;
+
+    color:#6b7280;
+
+    margin-top:5px;
+
+}
+
+
+
+/* =========================
+   COMPLIANCE BADGES
+========================= */
+
+
+.creds-badges {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+.badge-row {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+}
+
+
+
+.badge-icon {
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:20px;
+
+}
+
+
+
+.badge-icon.green {
+
+    background:#dcfce7;
+
+}
+
+
+
+.badge-icon.blue {
+
+    background:#dbeafe;
+
+}
+
+
+
+.badge-icon.yellow {
+
+    background:#fef3c7;
+
+}
+
+
+
+.badge-icon.purple {
+
+    background:#ede9fe;
+
+}
+
+
+
+.badge-text-title {
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--dark);
+
+}
+
+
+
+.badge-text-sub {
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+
+
+.badge-tick {
+
+    margin-left:auto;
+
+    color:#16a34a;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* =========================
+   RATING
+========================= */
+
+
+.creds-rating {
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+.rating-stars {
+
+    color:#f59e0b;
+
+    font-size:22px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.rating-text {
+
+    font-size:14px;
+
+    color:#6b7280;
+
+}
+
+
+
+.rating-badge {
+
+    text-align:center;
+
+}
+
+
+
+.rating-num {
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+}
+
+
+
+.rating-out {
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:1100px){
+
+
+.hero-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+.hero-creds {
+
+    max-width:600px;
+
+}
+
+
+.hero h1 {
+
+    font-size:50px;
+
+}
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.hero nav {
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+.nav-links {
+
+    display:none;
+
+}
+
+
+.hero h1 {
+
+    font-size:38px;
+
+}
+
+
+.hero-actions {
+
+    flex-direction:column;
+
+}
+
+
+.creds-counts {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}

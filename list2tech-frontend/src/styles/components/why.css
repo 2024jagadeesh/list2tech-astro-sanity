@@ -1,0 +1,186 @@
+/* =========================
+   WHY SECTION
+========================= */
+
+
+#why {
+
+    background:#ffffff;
+
+}
+
+
+
+/* =========================
+   WHY GRID
+========================= */
+
+
+.why-grid {
+
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(4, 1fr);
+
+    gap:24px;
+
+}
+
+
+
+/* =========================
+   WHY CARD
+========================= */
+
+
+.why-card {
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:30px 25px;
+
+    transition:.3s ease;
+
+}
+
+
+
+.why-card:hover {
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+    border-color:transparent;
+
+}
+
+
+
+/* =========================
+   ICON
+========================= */
+
+
+.why-icon {
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#fce7f3;
+
+    font-size:28px;
+
+    margin-bottom:22px;
+
+}
+
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+
+.why-card h3 {
+
+    font-size:21px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* =========================
+   CARD DESCRIPTION
+========================= */
+
+
+.why-card p {
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:#6b7280;
+
+}
+
+
+
+/* =========================
+   SECTION ALIGNMENT
+========================= */
+
+
+#why .section-body {
+
+    max-width:750px;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:1100px){
+
+
+.why-grid {
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.why-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+.why-card {
+
+    padding:25px;
+
+}
+
+
+}

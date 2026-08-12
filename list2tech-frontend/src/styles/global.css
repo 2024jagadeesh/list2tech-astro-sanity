@@ -1,0 +1,315 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+/* Layout */
+
+@import "./components/header.css";
+@import "./components/footer.css";
+
+/* Components */
+
+@import "./components/hero.css";
+
+@import "./components/trustbar.css";
+
+@import "./components/why.css";
+
+@import "./components/technology.css";
+
+@import "./components/steps.css";
+
+@import "./components/testimonials.css";
+
+@import "./components/cta.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --primary: #D0145A;
+    --primary-dark: #a80f47;
+
+    --dark: #111827;
+    --text: #4b5563;
+
+    --white: #ffffff;
+
+    --light-bg: #f8fafc;
+
+    --border: #e5e7eb;
+
+    --container: 1200px;
+
+}
+
+
+
+/* =========================
+   COMMON CONTAINER
+========================= */
+
+
+.section-inner {
+
+    max-width: var(--container);
+
+    margin: auto;
+
+    padding-left: 20px;
+
+    padding-right:20px;
+
+}
+
+
+
+/* =========================
+   SECTION COMMON
+========================= */
+
+
+section {
+
+    padding:90px 0;
+
+}
+
+
+
+.section-eyebrow {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.section-title {
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+    margin-bottom:18px;
+
+}
+
+
+
+.section-body {
+
+    max-width:700px;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:var(--text);
+
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+.btn-primary {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 28px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:8px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.btn-primary:hover {
+
+    background:var(--primary-dark);
+
+}
+
+
+
+.btn-ghost {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 28px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:8px;
+
+    font-weight:700;
+
+}
+
+
+
+/* =========================
+   CTA BUTTONS
+========================= */
+
+
+.btn-white {
+
+    display:inline-flex;
+
+    padding:14px 30px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    border-radius:8px;
+
+    font-weight:700;
+
+}
+
+
+
+.btn {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    font-weight:700;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:992px){
+
+
+.section-title {
+
+    font-size:34px;
+
+}
+
+
+section {
+
+    padding:60px 0;
+
+}
+
+
+}
+
+
+@media(max-width:768px){
+
+
+.section-title {
+
+    font-size:30px;
+
+}
+
+
+.section-body {
+
+    font-size:16px;
+
+}
+
+
+.section-inner {
+
+    padding-left:16px;
+
+    padding-right:16px;
+
+}
+
+
+}

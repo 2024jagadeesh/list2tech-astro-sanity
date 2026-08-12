@@ -1,0 +1,21 @@
+---
+const { data } = Astro.props;
+---
+
+<section class="trust-bar">
+
+{
+data.items?.map((item)=>(
+  <div class="trust-item">
+
+    <span class="trust-icon">
+      {item.icon}
+    </span>
+
+    {item.text}
+
+  </div>
+))
+}
+
+</section>

@@ -1,0 +1,61 @@
+---
+const { data } = Astro.props;
+---
+
+<section id="why">
+
+  <div class="section-inner">
+
+    <div class="section-eyebrow">
+      {data.eyebrow}
+    </div>
+
+
+    <h2 class="section-title">
+      {data.title}
+    </h2>
+
+
+    <p class="section-body">
+      {data.description}
+    </p>
+
+
+
+    <div class="why-grid">
+
+
+      {
+        data.cards?.map((card)=>(
+          
+          <div class="why-card">
+
+
+            <div class="why-icon">
+              {card.icon}
+            </div>
+
+
+            <h3>
+              {card.title}
+            </h3>
+
+
+            <p>
+              {card.description}
+            </p>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+
+</section>

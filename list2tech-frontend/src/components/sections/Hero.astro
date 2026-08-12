@@ -1,0 +1,256 @@
+---
+const {data} = Astro.props;
+---
+
+
+<section class="hero">
+
+
+<div class="hero-grid">
+
+
+<!-- LEFT CONTENT -->
+
+<div class="hero-left">
+
+
+<div class="hero-eyebrow">
+{data.eyebrow}
+</div>
+
+
+
+<h1>
+
+{
+data.heading.split(data.highlightText)[0]
+}
+
+<em>
+{data.highlightText}
+</em>
+
+{
+data.heading.split(data.highlightText)[1]
+}
+
+</h1>
+
+
+
+<p class="hero-sub">
+
+{data.description}
+
+</p>
+
+
+
+<div class="hero-actions">
+
+
+{
+data.buttons?.map((button)=>(
+
+<a
+
+href={button.url}
+
+class={
+button.style === "Primary"
+? "btn-primary"
+: "btn-ghost"
+}
+
+>
+
+{button.label}
+
+</a>
+
+))
+
+}
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- RIGHT PANEL -->
+
+<div class="hero-creds">
+
+
+<div class="creds-title">
+
+{data.panelTitle}
+
+</div>
+
+
+
+<!-- STATS -->
+
+<div class="creds-counts">
+
+
+{
+data.stats?.map((item)=>(
+
+<div class="count-chip">
+
+
+<div class="count-num">
+
+{item.number}
+
+</div>
+
+
+<div class="count-label">
+
+{item.label}
+
+</div>
+
+
+</div>
+
+))
+}
+
+
+</div>
+
+
+
+
+
+<!-- BADGES -->
+
+<div class="creds-badges">
+
+
+{
+data.badges?.map((badge)=>(
+
+
+<div class="badge-row">
+
+
+<div class={`badge-icon ${badge.color}`}>
+
+{badge.icon}
+
+</div>
+
+
+
+<div>
+
+
+<div class="badge-text-title">
+
+{badge.title}
+
+</div>
+
+
+
+<div class="badge-text-sub">
+
+{badge.description}
+
+</div>
+
+
+</div>
+
+
+
+<div class="badge-tick">
+
+✓
+
+</div>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+
+
+
+
+<!-- RATING -->
+
+<div class="creds-rating">
+
+
+<div>
+
+
+<div class="rating-stars">
+
+{data.rating.stars}
+
+</div>
+
+
+<div class="rating-text">
+
+{data.rating.reviewText}
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="rating-badge">
+
+
+<div class="rating-num">
+
+{data.rating.score}
+
+</div>
+
+
+<div class="rating-out">
+
+{data.rating.scoreLabel}
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+</section>

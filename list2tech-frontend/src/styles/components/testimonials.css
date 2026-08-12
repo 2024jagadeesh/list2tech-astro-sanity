@@ -1,0 +1,240 @@
+/* =========================
+   TESTIMONIAL SECTION
+========================= */
+
+
+.testimonial-section {
+
+    background:#111827;
+
+    padding:90px 0;
+
+}
+
+
+
+/* =========================
+   HEADING
+========================= */
+
+
+.testimonial-section .section-eyebrow {
+
+    color:rgba(255,255,255,.65);
+
+}
+
+
+
+.testimonial-section .section-title {
+
+    color:#ffffff;
+
+}
+
+
+
+/* =========================
+   TESTIMONIAL GRID
+========================= */
+
+
+.testi-grid {
+
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+/* =========================
+   TESTIMONIAL CARD
+========================= */
+
+
+.testi-card {
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:32px;
+
+    transition:.3s ease;
+
+}
+
+
+
+.testi-card:hover {
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.25);
+
+}
+
+
+
+/* =========================
+   STARS
+========================= */
+
+
+.testi-stars {
+
+    color:#f59e0b;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* =========================
+   QUOTE
+========================= */
+
+
+.testi-quote {
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:#4b5563;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* =========================
+   AUTHOR AREA
+========================= */
+
+
+.testi-author {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+/* =========================
+   AVATAR
+========================= */
+
+
+.testi-avatar {
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fce7f3;
+
+    color:var(--primary);
+
+    font-size:20px;
+
+    font-weight:800;
+
+}
+
+
+
+/* =========================
+   NAME
+========================= */
+
+
+.testi-name {
+
+    font-size:16px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+}
+
+
+
+.testi-role {
+
+    font-size:14px;
+
+    color:#6b7280;
+
+    margin-top:3px;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:1000px){
+
+
+.testi-grid {
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.testi-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+.testi-card {
+
+    padding:25px;
+
+}
+
+
+}

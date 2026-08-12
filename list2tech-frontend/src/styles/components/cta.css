@@ -1,0 +1,189 @@
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta-section {
+
+    background: var(--primary);
+
+    padding: 90px 0;
+
+}
+
+
+/* =========================
+   CTA CONTENT
+========================= */
+
+.cta-section .section-inner {
+
+    text-align: center;
+
+}
+
+
+.cta-section .section-eyebrow {
+
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+}
+
+
+.cta-section .section-title {
+
+    color: #fff;
+
+    max-width: 800px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-bottom: 16px;
+
+}
+
+
+.cta-section .section-body {
+
+    color: rgba(255, 255, 255, 0.75);
+
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+
+}
+
+
+.cta-section .section-body strong {
+
+    color: #fff;
+
+}
+
+
+.cta-section .section-body a {
+
+    color: #fff;
+
+}
+
+
+
+/* =========================
+   CTA ACTIONS
+========================= */
+
+.cta-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 16px;
+
+}
+
+
+
+/* =========================
+   WHITE BUTTON
+========================= */
+
+.cta-section .btn-white {
+
+    background: #fff;
+
+    color: var(--primary);
+
+    border: 1px solid #fff;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: all .3s ease;
+
+}
+
+
+.cta-section .btn-white:hover {
+
+    background: transparent;
+
+    color: #fff;
+
+}
+
+
+
+/* =========================
+   GHOST BUTTON
+========================= */
+
+.cta-section .btn-ghost {
+
+    background: transparent;
+
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: all .3s ease;
+
+}
+
+
+.cta-section .btn-ghost:hover {
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-color: #fff;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .cta-section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .cta-actions {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .cta-actions a {
+
+        width: 100%;
+
+        max-width: 320px;
+
+    }
+
+}

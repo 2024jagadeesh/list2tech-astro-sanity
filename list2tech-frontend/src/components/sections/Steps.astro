@@ -1,0 +1,77 @@
+---
+const { data } = Astro.props;
+---
+
+
+<section id="how">
+
+
+<div class="section-inner">
+
+
+<div class="section-eyebrow">
+
+{data.eyebrow}
+
+</div>
+
+
+
+<h2 class="section-title">
+
+{data.title}
+
+</h2>
+
+
+
+
+<div class="steps">
+
+
+{
+
+data.steps?.map((step)=>(
+
+
+<div class="step">
+
+
+<div class="step-num">
+
+{step.number}
+
+</div>
+
+
+
+<h3>
+
+{step.title}
+
+</h3>
+
+
+
+<p>
+
+{step.description}
+
+</p>
+
+
+</div>
+
+
+))
+
+}
+
+
+</div>
+
+
+</div>
+
+
+</section>

@@ -1,0 +1,61 @@
+---
+const { data } = Astro.props;
+---
+
+<section class="testimonial-section">
+
+  <div class="section-inner">
+
+    <div class="section-eyebrow">
+      {data.eyebrow}
+    </div>
+
+    <h2 class="section-title">
+      {data.title}
+    </h2>
+
+    <div class="testi-grid">
+
+      {
+        data.testimonials?.map((testimonial) => (
+
+          <div class="testi-card">
+
+            <div class="testi-stars">
+              {testimonial.stars}
+            </div>
+
+            <p class="testi-quote">
+              "{testimonial.quote}"
+            </p>
+
+            <div class="testi-author">
+
+              <div class="testi-avatar">
+                {testimonial.avatar}
+              </div>
+
+              <div>
+
+                <div class="testi-name">
+                  {testimonial.name}
+                </div>
+
+                <div class="testi-role">
+                  {testimonial.role}
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

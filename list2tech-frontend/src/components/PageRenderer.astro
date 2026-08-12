@@ -1,0 +1,57 @@
+---
+import Hero from "./sections/Hero.astro";
+import TrustBar from "./sections/TrustBar.astro";
+import Why from "./sections/Why.astro";
+import TechnologyLists from "./sections/TechnologyLists.astro";
+import Steps from "./sections/Steps.astro";
+import Testimonials from "./sections/Testimonials.astro";
+import CTA from "./sections/CTA.astro";
+
+
+const { sections=[] } = Astro.props;
+
+---
+
+{
+sections.map((section)=>{
+
+
+switch(section._type){
+
+
+case "heroSection":
+    return <Hero data={section} />;
+
+
+case "trustBarSection":
+    return <TrustBar data={section} />;
+
+
+case "whySection":
+    return <Why data={section} />;
+
+
+case "listsSection":
+    return <TechnologyLists data={section} />;
+
+
+case "stepsSection":
+    return <Steps data={section} />;
+
+
+case "testimonialSection":
+    return <Testimonials data={section} />;
+
+
+case "ctaSection":
+    return <CTA data={section} />;
+
+
+default:
+    return null;
+
+}
+
+
+})
+}

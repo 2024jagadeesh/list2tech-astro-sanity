@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import PageRenderer from "../components/PageRenderer.astro";
+
+
+import { sanityClient } from "../lib/sanity";
+import { homepageQuery } from "../lib/queries";
+
+
+const page = await sanityClient.fetch(homepageQuery);
+
+
+---
+
+
+<BaseLayout title={page.title}>
+
+
+<PageRenderer 
+sections={page.sections}
+/>
+
+
+</BaseLayout>

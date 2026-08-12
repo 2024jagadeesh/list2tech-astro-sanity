@@ -1,0 +1,178 @@
+---
+const { data } = Astro.props;
+---
+
+
+<section id="lists" class="lists-section">
+
+<div class="section-inner">
+
+
+<div class="lists-header">
+
+<div class="section-eyebrow">
+{data.eyebrow}
+</div>
+
+
+<h2 class="section-title">
+{data.title}
+</h2>
+
+
+<p class="section-body">
+{data.description}
+</p>
+
+</div>
+
+
+
+<div class="lists-body">
+
+
+<div class="lists-col-left">
+
+<div class="list-categories">
+
+
+{
+data.categories?.map((category,index)=>(
+
+<button 
+type="button"
+class={`list-tab ${index===0 ? "active":""}`}
+data-tab={`panel-${index}`}
+>
+
+{category.tabName}
+
+</button>
+
+
+))
+}
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="list-panels">
+
+
+{
+data.categories?.map((category,index)=>(
+
+
+<div 
+class={`list-panel ${index===0 ? "active":""}`}
+id={`panel-${index}`}
+>
+
+
+<h3 class="list-panel-title">
+{category.panelTitle}
+</h3>
+
+
+<p class="list-panel-sub">
+{category.description}
+</p>
+
+
+<div class="tag-grid">
+
+
+{
+category.technologies?.map((technology)=>(
+
+<a href="#contact" class="tag">
+{technology}
+</a>
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<script is:inline>
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+const tabs = document.querySelectorAll(".list-tab");
+
+const panels = document.querySelectorAll(".list-panel");
+
+
+tabs.forEach(tab=>{
+
+
+tab.addEventListener("click",()=>{
+
+
+tabs.forEach(t=>{
+t.classList.remove("active");
+});
+
+
+panels.forEach(panel=>{
+panel.classList.remove("active");
+});
+
+
+
+tab.classList.add("active");
+
+
+
+const panelId = tab.getAttribute("data-tab");
+
+
+const panel = document.getElementById(panelId);
+
+
+if(panel){
+
+panel.classList.add("active");
+
+}
+
+
+});
+
+
+});
+
+
+});
+
+
+</script>

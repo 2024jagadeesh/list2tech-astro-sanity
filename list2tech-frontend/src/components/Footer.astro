@@ -1,0 +1,90 @@
+---
+const {data}=Astro.props;
+---
+
+
+<footer class="site-footer">
+
+
+<div class="footer-grid">
+
+
+<div>
+
+
+<a class="footer-logo">
+
+{data.siteName}
+
+</a>
+
+
+<p class="footer-description">
+
+{data.footerDescription}
+
+</p>
+
+
+</div>
+
+
+
+{
+data.footerColumns?.map(column=>(
+
+
+<div>
+
+
+<h3 class="footer-title">
+
+{column.title}
+
+</h3>
+
+
+
+<ul class="footer-links">
+
+
+{
+column.links?.map(link=>(
+
+<li>
+
+<a href={link.url}>
+
+{link.label}
+
+</a>
+
+</li>
+
+))
+}
+
+
+</ul>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+{data.copyright}
+
+</div>
+
+
+
+</footer>

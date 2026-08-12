@@ -1,0 +1,4 @@
+[build]
+  base = "list2tech-frontend"
+  command = "npm run build"
+  publish = "dist"

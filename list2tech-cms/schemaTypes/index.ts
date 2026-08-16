@@ -1,44 +1,41 @@
-import page from './page'
+import {pageType} from './page'
 
-import heroSection from './sections/heroSection'
-import trustBarSection from './sections/trustBarSection'
-import whySection from './sections/whySection'
-import listsSection from './sections/listsSection'
-import stepsSection from './sections/stepsSection'
-import testimonialSection from './sections/testimonialSection'
-import ctaSection from './sections/ctaSection'
+import {heroSectionType} from './sections/heroSection'
+import {trustBarSectionType} from './sections/trustBarSection'
+import {whySectionType} from './sections/whySection'
+import {listsSectionType} from './sections/listsSection'
+import {stepsSectionType} from './sections/stepsSection'
+import {testimonialSectionType} from './sections/testimonialSection'
+import {ctaSectionType} from './sections/ctaSection'
 import siteSettings from './siteSettings'
 
-import button from './objects/button'
-import stat from './objects/stat'
-import badge from './objects/badge'
-import rating from './objects/rating'
-import featureCard from './objects/featureCard'
-import technologyCategory from './objects/technologyCategory'
-import step from './objects/step'
-import testimonial from './objects/testimonial'
-
+import {buttonType} from './objects/button'
+import {statType} from './objects/stat'
+import {badgeType} from './objects/badge'
+import {ratingType} from './objects/rating'
+import {featureCardType} from './objects/featureCard'
+import {technologyCategoryType} from './objects/technologyCategory'
+import {stepType} from './objects/step'
+import {testimonialType} from './objects/testimonial'
 
 export const schemaTypes = [
+  pageType,
 
-page,
+  heroSectionType,
+  trustBarSectionType,
+  whySectionType,
+  listsSectionType,
+  stepsSectionType,
+  testimonialSectionType,
+  ctaSectionType,
+  siteSettings,
 
-heroSection,
-trustBarSection,
-whySection,
-listsSection,
-stepsSection,
-testimonialSection,
-ctaSection,
-siteSettings,
-
-button,
-stat,
-badge,
-rating,
-featureCard,
-technologyCategory,
-step,
-testimonial
-
+  buttonType,
+  statType,
+  badgeType,
+  ratingType,
+  featureCardType,
+  technologyCategoryType,
+  stepType,
+  testimonialType,
 ]

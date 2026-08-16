@@ -29,6 +29,7 @@ const pageType = defineType({
       type: 'array',
       of: [
         {type: 'heroSection'},
+        {type: 'innerHeroSection'},
         {type: 'trustBarSection'},
         {type: 'whySection'},
         {type: 'listsSection'},

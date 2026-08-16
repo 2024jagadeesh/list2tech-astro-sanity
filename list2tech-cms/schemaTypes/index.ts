@@ -1,6 +1,7 @@
 import page from './page'
 
 import {heroSectionType} from './sections/heroSection'
+import {innerHeroSectionType} from './sections/innerHeroSection'
 import {trustBarSectionType} from './sections/trustBarSection'
 import {whySectionType} from './sections/whySection'
 import {listsSectionType} from './sections/listsSection'
@@ -22,6 +23,7 @@ export const schemaTypes = [
   page,
 
   heroSectionType,
+  innerHeroSectionType,
   trustBarSectionType,
   whySectionType,
   listsSectionType,

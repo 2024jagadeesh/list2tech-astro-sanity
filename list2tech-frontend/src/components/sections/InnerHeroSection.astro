@@ -1,0 +1,127 @@
+---
+import {urlFor} from '../../lib/image'
+
+interface Props {
+  section: any
+}
+
+const {section} = Astro.props
+
+const heroImageUrl = section.image
+  ? urlFor(section.image).width(1200).quality(85).url()
+  : null
+---
+
+<section class="page-hero">
+  <div class="hero-inner">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+
+      <span>/</span>
+
+      <a href="/technology-lists">
+        Technology Lists
+      </a>
+
+      <span>/</span>
+
+      <span class="breadcrumb-current">
+        {section.breadcrumbCurrent}
+      </span>
+    </div>
+
+    <div class="hero-layout">
+
+      <div class="hero-content">
+
+        {section.eyebrow && (
+          <div class="page-eyebrow">
+            {section.eyebrow}
+          </div>
+        )}
+
+        <h1 class="page-title">
+          {section.title}
+
+          {section.highlightText && (
+            <span>{section.highlightText}</span>
+          )}
+        </h1>
+
+        {section.description && (
+          <p class="page-description">
+            {section.description}
+          </p>
+        )}
+
+        <div class="hero-actions">
+
+          {section.primaryButton?.label && (
+            <a
+              href={section.primaryButton.url || '#'}
+              class="btn btn-primary"
+            >
+              {section.primaryButton.label}
+            </a>
+          )}
+
+          {section.secondaryButton?.label && (
+            <a
+              href={section.secondaryButton.url || '#'}
+              class="btn btn-outline"
+            >
+              {section.secondaryButton.label}
+            </a>
+          )}
+
+        </div>
+
+      </div>
+
+      {section.image && (
+  <div class="hero-image-card">
+
+    {heroImageUrl && (
+      <img
+        src={heroImageUrl}
+        alt={section.imageAlt || section.title}
+      />
+    )}
+
+    <div class="hero-image-overlay"></div>
+
+    {section.imageBadge && (
+      <div class="hero-image-badge">
+        <span class="badge-check">✓</span>
+        {section.imageBadge}
+      </div>
+    )}
+
+    {section.statNumber && (
+      <div class="hero-image-stat">
+        <div class="image-stat-number">
+          {section.statNumber}
+        </div>
+
+        {section.statLabel && (
+          <div class="image-stat-label">
+            {section.statLabel}
+          </div>
+        )}
+      </div>
+    )}
+
+    {section.imageLabel && (
+      <div class="hero-image-label">
+        <span class="image-status"></span>
+        {section.imageLabel}
+      </div>
+    )}
+
+  </div>
+)}
+
+    </div>
+  </div>
+</section>

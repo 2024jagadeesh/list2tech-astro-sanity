@@ -13,6 +13,7 @@
     "start": "node dist/server/entry.mjs"
   },
   "dependencies": {
+    "@astrojs/node": "^11.1.2",
     "@sanity/client": "^7.26.2",
     "@sanity/image-url": "^2.1.1",
     "astro": "^7.2.1"

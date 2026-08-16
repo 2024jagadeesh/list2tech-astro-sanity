@@ -9,11 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "start": "node dist/server/entry.mjs"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^11.1.2",
     "@sanity/client": "^7.26.2",
     "@sanity/image-url": "^2.1.1",
     "astro": "^7.2.1"

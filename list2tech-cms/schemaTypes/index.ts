@@ -1,4 +1,4 @@
-import {pageType} from './page'
+import page from './page'
 
 import {heroSectionType} from './sections/heroSection'
 import {trustBarSectionType} from './sections/trustBarSection'
@@ -19,7 +19,7 @@ import {stepType} from './objects/step'
 import {testimonialType} from './objects/testimonial'
 
 export const schemaTypes = [
-  pageType,
+  page,
 
   heroSectionType,
   trustBarSectionType,

@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 
-export const pageType = defineType({
+const pageType = defineType({
   name: 'page',
   title: 'Pages',
   type: 'document',
@@ -27,7 +27,6 @@ export const pageType = defineType({
       name: 'sections',
       title: 'Page Sections',
       type: 'array',
-
       of: [
         {type: 'heroSection'},
         {type: 'trustBarSection'},
@@ -40,3 +39,5 @@ export const pageType = defineType({
     }),
   ],
 })
+
+export default pageType
